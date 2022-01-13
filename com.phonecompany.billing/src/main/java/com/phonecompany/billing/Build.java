@@ -1,10 +1,17 @@
 package com.phonecompany.billing;
 
 
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.text.SimpleDateFormat;
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.stream.Collectors;
+
 
 public class Build {
 
@@ -13,13 +20,25 @@ public class Build {
     public int sec;
 
 
+    public int calculate(String s) throws Exception {
+        ArrayList<String> time = new ArrayList();
+        time.add(setHovor());
+        time.add(String.valueOf(getPrice()));
+        return 0;
+
+    }
+
+
+
+
+
     public String setHovor() throws Exception {
         BufferedReader bf = new BufferedReader(new FileReader("hovor.csv"));
-        String s;
-        while ((s = bf.readLine()) != null) {
+        String b;
+        while ((b = bf.readLine()) != null) {
 
         }
-        return s;
+        return b;
     }
 
     public int getPrice() {
@@ -37,6 +56,9 @@ public class Build {
         SimpleDateFormat sp1 = new SimpleDateFormat("00:00:00");
         return sp1.format(date);
     }
+
+
+    
 
 }
 
